@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/* eslint-disable no-unused-vars */
+// import {mean, output, output1} from "./dev/Enrollment.js";
+// import { message, sayHiToNinja} from "./dev/Ninja.js";
+// import * as arrayExamples from "./dev/array.js";
+// import Person from './model/Person.js';
+import Student from './model/Student.js';
+import Address from './model/Address.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// var curry = new Student('Haskell', 'Curry', '111-11-1111', 'Penn State');
+// curry.address = new Address('US');
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// var turing = new Student('Alan', 'Turing', '222-22-2222', 'Princeton');
+// turing.address = new Address('England');
+
+// var church = new Student('Alonzo', 'Church', '333-33-3333', 'Princeton');
+// church.address = new Address('US');
+
+// var kleene = new Student('Stephen', 'Kleene', '444-44-4444', 'Princeton');
+// kleene.address = new Address('US');
