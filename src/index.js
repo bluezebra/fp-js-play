@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 // import {mean, output, output1} from "./dev/Enrollment.js";
 // import { message, sayHiToNinja} from "./dev/Ninja.js";
-// import * as arrayExamples from "./dev/array.js";
+import * as arrayExamples from "./dev/array.js";
 // import Person from './model/Person.js';
-import Student from './model/Student.js';
-import Address from './model/Address.js';
+import Student from "./model/Student.js";
+import Address from "./model/Address.js";
 
 // var curry = new Student('Haskell', 'Curry', '111-11-1111', 'Penn State');
 // curry.address = new Address('US');
