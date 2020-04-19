@@ -1,4 +1,4 @@
 /* eslint-disable no-unused-vars */
 
-import { funcStore } from "./dev/func-store.js";
+import * as x from "./dev/simple-callback.js";
 

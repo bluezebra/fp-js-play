@@ -4,3 +4,10 @@ export function assert(value, desc) {
   li.appendChild(document.createTextNode(desc));
   document.getElementById("results").appendChild(li);
 }
+
+
+export function report(desc) {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(desc));
+    document.getElementById("results").appendChild(li);
+  }
