@@ -1,21 +1,21 @@
-import { assert, report } from "./simple-test.js";
+import { assert, report } from './simple-test';
 
-var text = "Domo arigato!";
+const text = 'Domo arigato!';
 
-report("Before defining functions");
+report('Before defining functions');
 
 function useless(ninjaCallback) {
-  report("In useless function");
+  report('In useless function');
   return ninjaCallback();
 }
 
 function getText() {
-  report("In getText function");
+  report('In getText function');
   return text;
 }
 
-report("Before making all the calls");
+report('Before making all the calls');
 
-assert(useless(getText) === text, "The useless function works! " + text);
+assert(useless(getText) === text, `The useless function works! ${text}`);
 
-report("After the calls have been made");
+report('After the calls have been made');
