@@ -1,5 +1,7 @@
 import { assert, report } from './simple-test';
 
+// Listing 3.1 A simple callback example
+
 const text = 'Domo arigato!';
 
 report('Before defining functions');
