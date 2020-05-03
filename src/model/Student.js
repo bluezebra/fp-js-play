@@ -1,10 +1,11 @@
-import Person from "./Person.js";
+import Person from './Person';
 
 export default class Student extends Person {
   constructor(firstname, lastname, ssn, school) {
     super(firstname, lastname, ssn);
     this._school = school;
   }
+
   get school() {
     return this._school;
   }

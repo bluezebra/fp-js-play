@@ -1,11 +1,11 @@
-import { assert } from "./simple-test.js";
+import { assert } from './simple-test.js';
 
-var ninja = {};
+const ninja = {};
 
-var store = {
+const store = {
   nextId: 1,
   cache: {},
-  add: function (fn) {
+  add(fn) {
     if (!fn.id) {
       fn.id = this.nextId++;
       this.cache[fn.id] = fn;
@@ -14,5 +14,5 @@ var store = {
   },
 };
 
-assert(store.add(ninja), "Function was safely added.");
-assert(!store.add(ninja), "But it was only added once.");
+assert(store.add(ninja), 'Function was safely added.');
+assert(!store.add(ninja), 'But it was only added once.');
