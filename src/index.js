@@ -1,3 +1,3 @@
-import './dev/isPrime';
+import './dev/forEach';
 
-// Listing 3.3 Memoizing previously computed values
+// Listing 4.12 Building a forEach function to demonstrate setting a function context
