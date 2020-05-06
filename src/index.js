@@ -1,3 +1,3 @@
-import './func/students';
+import './func/model/zip-code';
 
-// Listing 2.1 Defining
+// function zipCode(code, location) 
