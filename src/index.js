@@ -1,3 +1,3 @@
-import './dev/forEach';
+import './func/array';
 
-// Listing 4.12 Building a forEach function to demonstrate setting a function context
+// chap1
