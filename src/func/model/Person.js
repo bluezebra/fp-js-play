@@ -1,5 +1,5 @@
 export default class Person {
-  constructor(ssn, firstname, lastname, birthYear = null, address = null) {
+  constructor(firstname, lastname, ssn, birthYear = null, address = null) {
     this._ssn = ssn;
     this._firstname = firstname;
     this._lastname = lastname;
@@ -32,7 +32,23 @@ export default class Person {
     return this._address;
   }
 
+  set address(address) {
+    this._address = address;
+    return this;
+  }
+
   get fullname() {
     return `${this._firstname} ${this._lastname}`;
+  }
+
+  peopleInSameCountry(friends) {
+    const result = [];
+    for (const idx in friends) {
+      const friend = friends[idx];
+      if (this.address.country === friend.address.country) {
+        result.push(friend);
+      }
+    }
+    return result;
   }
 }

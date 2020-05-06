@@ -13,16 +13,17 @@ const grades = enrolled.map((e) => e.grade);
 const sum = grades.reduce((a, b) => a + b, 0);
 const total = grades.length;
 
-export const mean = sum / total;
+const mean = sum / total;
+report(mean);
 
-export const output = _.chain(enrollment)
+const output = _.chain(enrollment)
   .filter((s) => s.enrolled > 1)
   .map('grade')
   .mean()
   .value();
+report(output);
 
-export const output1 = _.meanBy(enrollment, 'grade');
+const output1 = _.meanBy(enrollment, 'grade');
+report(output1);
 
-console.log(mean);
-console.log(output);
-console.log(output1);
+
