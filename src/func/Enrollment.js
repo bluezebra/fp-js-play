@@ -1,4 +1,6 @@
 import _ from 'lodash';
+// eslint-disable-next-line no-unused-vars
+import { assert, report, printMessage } from '../ninja/simple-test';
 
 const enrollment = [
   { enrolled: 2, grade: 100 },

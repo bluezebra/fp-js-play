@@ -1,3 +1,3 @@
-import './func/array';
+import './func/func1';
 
 // chap1
