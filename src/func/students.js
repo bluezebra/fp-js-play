@@ -1,4 +1,5 @@
 // import _ from 'lodash';
+import * as R from 'ramda';
 // eslint-disable-next-line no-unused-vars
 import { assert, report, printMessage } from '../test-simple/simple-test';
 import Student from './model/Student';
@@ -35,11 +36,13 @@ const findStudentsBy = (friends, selectorfn) => friends.filter(selectorfn);
 report(findStudentsBy([curry, turing, church, kleene], selector('US', 'Princeton)')).map((s) => s.fullname));
 
 // Freeze Immutability
-const person = Object.freeze(new Person('Haskell', 'Curry', '444-44-4444'));
+const personMutableChildren = Object.freeze(new Person('Haskell', 'Curry', '444-44-4444'));
 // TypeError: Cannot assign to read only property '_firstname' of object '#<Person>'
 // person.firstname = 'Bob';
 
 
-// var person = new Person('Alonzo', 'Church', '444-44-4444');
-// const lastnameLens = R.lensProp('lastname');
-// const newPerson = R.set(lastnameLens, 'Mourning', person);
+const person = new Person('Alonzo', 'Church', '444-44-4444');
+const lastnameLens = R.lensProp('lastname');
+const newPerson = R.set(lastnameLens, 'Mourning', person);
+
+report(newPerson);
