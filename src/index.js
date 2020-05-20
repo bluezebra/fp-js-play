@@ -2,4 +2,4 @@
 import { assert, report, printMessage } from './test-simple/simple-test';
 import './func/students';
 
-// 2.2.4 Navigating and modifying object graphs with lenses
+// 2.3 Functions
