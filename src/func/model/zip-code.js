@@ -1,26 +1,27 @@
-import { assert, report, printMessage } from "../../test-simple/simple-test";
+// eslint-disable-next-line no-unused-vars
+import { assert, report, printMessage } from '../../test-simple/simple-test';
 // Value object immutable
 
 function zipCode(code, location) {
-  let _code = code;
-  let _location = location || "";
+  const _code = code;
+  const _location = location || '';
   return {
-    code: function () {
+    code() {
       return _code;
     },
-    location: function () {
+    location() {
       return _location;
     },
-    fromString: function (str) {
-      let parts = str.split("-");
+    fromString(str) {
+      const parts = str.split('-');
       return zipCode(parts[0], parts[1]);
     },
-    toString: function () {
-      return _code + "-" + _location;
+    toString() {
+      return `${_code}-${_location}`;
     },
   };
 }
 
-const princetonZip = zipCode("08544", "3345");
+const princetonZip = zipCode('08544', '3345');
 
-report(princetonZip.toString()); //-> '08544-3345'
+report(princetonZip.toString()); // -> '08544-3345'

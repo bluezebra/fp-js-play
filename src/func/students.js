@@ -20,16 +20,12 @@ const kleene = new Student('Stephen', 'Kleene', '444-44-4444', 'Princeton');
 kleene.address = new Address('US');
 
 // OO
-report(
-  church.studentsInSameCountryAndSchool([curry, turing, kleene])
-    .map((s) => s.fullname),
-);
+report(church.studentsInSameCountryAndSchool([curry, turing, kleene]).map((s) => s.fullname));
 
 // imperative
 report(
-  `studentsInSameCountryAndSchool: ${church.studentsInSameCountryAndSchool(
-    [curry, turing, kleene],
-  )
+  `studentsInSameCountryAndSchool: ${church
+    .studentsInSameCountryAndSchool([curry, turing, kleene])
     .map((s) => s.fullname)}`,
 );
 
@@ -60,10 +56,7 @@ assert(newPerson !== person, 'Not same person');
 report(R.view(lastnameLens, person));
 
 // even on nested objects
-person.address = new Address(
-  'US', 'NJ', 'Princeton', zipCode('08544', '1234'),
-  'Alexander St.',
-);
+person.address = new Address('US', 'NJ', 'Princeton', zipCode('08544', '1234'), 'Alexander St.');
 
 // Let’s create a lens that navigates to the address.zip property:
 const zipPath = ['address', 'zip'];
