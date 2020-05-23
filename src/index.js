@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import { assert, report, printMessage } from './test-simple/simple-test';
-import './func/students';
+import './func/reduce';
 
-// 2.4.4 Practical applications of closures
+// Listing 3.3 Computing country counts

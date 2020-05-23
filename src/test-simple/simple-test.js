@@ -11,6 +11,10 @@ export function report(desc) {
   document.getElementById('results').appendChild(li);
 }
 
+export function reportObject(obj) {
+  report(JSON.stringify(obj, null, 4));
+}
+
 export function printMessage(elementId, format, message) {
   document.querySelector(`#${elementId}`).innerHTML = `<${format}>${message}</${format}>`;
 }

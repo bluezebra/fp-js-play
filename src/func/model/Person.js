@@ -28,6 +28,11 @@ export default class Person {
     return this._birthYear;
   }
 
+  set birthYear(birthYear) {
+    this._birthYear = birthYear;
+    return this;
+  }
+
   get address() {
     return this._address;
   }
