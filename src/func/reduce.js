@@ -1,7 +1,9 @@
 import _ from 'lodash';
-// import * as R from 'ramda';
-// eslint-disable-next-line no-unused-vars
-import { assert, report, printMessage, reportObject } from '../test-simple/simple-test';
+import * as R from 'ramda';
+import {
+  // eslint-disable-next-line no-unused-vars
+  assert, report, printMessage, reportObject,
+} from '../test-simple/simple-test';
 import Person from './model/Person';
 import Address from './model/Address';
 
@@ -29,3 +31,31 @@ const countryCount = _(persons).reduce((stat, person) => {
 }, {});
 
 reportObject(countryCount);
+
+// combine map and reduce
+const getCountry = (person) => person.address.country;
+const gatherStats = (stat, criteria) => {
+  stat[criteria] = _.isUndefined(stat[criteria]) ? 1
+    : stat[criteria] + 1;
+  return stat;
+};
+reportObject(_(persons).map(getCountry).reduce(gatherStats, {}));
+
+// rambda
+const countryPath = ['address', 'country'];
+const countryLens = R.lens(R.path(countryPath), R.assocPath(countryPath));
+reportObject(_(persons).map(R.view(countryLens)).reduce(gatherStats, {}));
+
+reportObject(_.groupBy(persons, R.view(countryLens)));
+
+// addition commutative operation
+report(_([0, 1, 3, 4, 5]).reduce(_.add)); // -> 13
+report(_([0, 1, 3, 4, 5]).reduceRight(_.add)); // -> 13
+
+assert(([1, 3, 4, 5]).reduce(_.divide) !== ([1, 3, 4, 5]).reduceRight(_.divide), 'divide non-commutative operation');
+
+// map and reduce traverse entire array, if you don't need this try some (any)
+const isNotValid = (val) => _.isUndefined(val) || _.isNull(val);
+const notAllValid = (args) => _(args).some(isNotValid);
+notAllValid(['string', 0, null, undefined]); // -> true
+notAllValid(['string', 0, {}]); // -> false

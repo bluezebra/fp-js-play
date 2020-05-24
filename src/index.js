@@ -2,4 +2,4 @@
 import { assert, report, printMessage } from './test-simple/simple-test';
 import './func/reduce';
 
-// Listing 3.3 Computing country counts
+// 3.3.4 Removing unwanted elements with _.filter
