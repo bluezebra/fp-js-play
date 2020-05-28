@@ -2,6 +2,6 @@ import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
 } from './test-simple/simple-test';
-import './func/filter';
+import './func/chain';
 
-// 3.3.4 Removing unwanted elements with _.filter
+// Listing 3.4 Combining map and reduce to compute statistics

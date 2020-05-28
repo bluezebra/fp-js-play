@@ -7,7 +7,6 @@ import {
 import Person from './model/Person';
 import Address from './model/Address';
 
-
 const p1 = new Person('Haskell', 'Curry', '111-11-1111');
 p1.address = new Address('US');
 p1.birthYear = 1900;
