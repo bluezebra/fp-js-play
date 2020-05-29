@@ -61,3 +61,29 @@ const countryLens = R.lens(R.path(countryPath), R.assocPath(countryPath));
 reportObject(_(persons).map(R.view(countryLens)).reduce(gatherStats, {}));
 // or
 reportObject(_.groupBy(persons, R.view(countryLens)));
+
+// Listing 3.8 Demonstrating lazy function chains with Lodash
+report(`Country with largest number:${_.chain(persons)
+  .filter(isValid)
+  .map(_.property('address.country'))
+  .reduce(gatherStats, {})
+  .values()
+  .sortBy('count')
+  .reverse()
+  .first()
+  .value()
+  .name}`); // -> 'US'
+
+// 3.4.2 SQL-like data: functions as data
+_.mixin({
+  select: _.map,
+  from: _.chain,
+  where: _.filter,
+  sortBy: _.sortByOrder,
+});
+
+report(_.from(persons)
+  .where((p) => p.birthYear > 1900 && p.address.country !== 'US')
+  .sortBy(['firstname'])
+  .select((p) => p.firstname)
+  .value());
