@@ -20,15 +20,15 @@ report(sumRecursive(nums));
 //   if (_.isEmpty(arr)) {
 //     return 0;
 //   }
-//   return _.first(arr) + sum(_.drop(arr, 1));
+//   return _.first(arr) + sum(_.tail(arr));
 // };
 
 // Recursive call in tail for performance
-const sum = (arr) => {
+const sum = (arr, acc = 0) => {
   if (_.isEmpty(arr)) {
-    return 0;
+    return acc;
   }
-  return sum(_.drop(arr, 1)) + _.first(arr);
+  return sum(_.tail(arr), acc + _.first(arr));
 };
 
 report(sum([])); // -> 0

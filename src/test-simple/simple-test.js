@@ -6,6 +6,7 @@ export function assert(value, desc) {
 }
 
 export function report(desc) {
+  console.log(desc);
   const li = document.createElement('li');
   li.appendChild(document.createTextNode(desc));
   document.getElementById('results').appendChild(li);

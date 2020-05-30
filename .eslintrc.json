@@ -27,6 +27,7 @@
             "error",
             "windows"
         ],
+        "no-console": "off",
         "max-len": [
             "error",
             {
