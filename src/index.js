@@ -4,7 +4,8 @@ import {
 } from './test-simple/simple-test';
 import './func/tree';
 
-// todo set up Jest instead
+// move to simpler empty js without react
+// todo set up Jest instead of hot reloading
 
 
-// 3.5.3 Recursively defined data structures
+// Listing 3.11 Node object
