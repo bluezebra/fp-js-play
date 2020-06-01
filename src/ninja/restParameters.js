@@ -1,4 +1,4 @@
-import { assert } from './simple-test';
+import { assert } from '../test-simple/simple-test';
 
 function multiMax(first, ...remainingNumbers) {
   const sorted = remainingNumbers.sort((a, b) => b - a);

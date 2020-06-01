@@ -1,4 +1,4 @@
-import { assert, report } from './simple-test';
+import { assert, report } from '../test-simple/simple-test';
 
 // Listing 3.1 A simple callback example
 

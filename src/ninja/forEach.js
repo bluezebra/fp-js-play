@@ -1,4 +1,4 @@
-import { assert, report } from './simple-test';
+import { assert, report } from '../test-simple/simple-test';
 
 
 function forEach(list, callback) {

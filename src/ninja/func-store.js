@@ -1,4 +1,4 @@
-import { assert } from './simple-test';
+import { assert } from '../test-simple/simple-test';
 
 const ninja = {};
 
