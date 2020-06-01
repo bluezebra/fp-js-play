@@ -35,19 +35,15 @@ const church = new Node(p4);
 const rosser = new Node(p2);
 const turing = new Node(p6);
 const kleene = new Node(p7);
-const nelson = new Node(new Person('123-23-2345', 'Nels', 'Nelson'));
-const constable = new Node(new Person('123-23-6778', 'Robert', 'Constable'));
-const mendelson = new Node(new Person('123-23-3454', 'Elliot', 'Mendelson'));
-const sacks = new Node(new Person('454-76-3434', 'Gerald', 'Sacks'));
-const gandy = new Node(new Person('454-78-3432', 'Robert', 'Gandy'));
+const nelson = new Node(new Person('Nels', 'Nelson', '123-23-2345'));
+const constable = new Node(new Person('Robert', 'Constable', '123-23-6778'));
+const mendelson = new Node(new Person('Elliot', 'Mendelson', '123-23-3454'));
+const sacks = new Node(new Person('Gerald', 'Sacks', '454-76-3434'));
+const gandy = new Node(new Person('Robert', 'Gandy', '454-78-3432'));
 
 church.append(rosser).append(turing).append(kleene);
 kleene.append(nelson).append(constable);
 rosser.append(mendelson).append(sacks);
 turing.append(gandy);
 
-const newTree = Tree.map(church, (p) => p.fullname);
-
-report(newTree.toArray());
-// assert(newTree.toArray() === ['Alonzo Church', 'Barkley Rosser', 'Elliot Mendelson',
-//   'Gerald Sacks', 'Alan Turing', 'Robert Gandy', 'Stephen Kleene', 'Nels Nelson', 'Robert Constable']);
+report(Tree.map(church, (p) => p.fullname).toArray());

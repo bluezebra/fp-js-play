@@ -39,4 +39,4 @@ export default class Node {
     return `Node (val: ${this._val}, children:
 			${this._children.length})`;
   }
-}
+};
