@@ -2,7 +2,7 @@ import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
 } from './test-simple/simple-test';
-import './mostly-adequate/curry';
+import './mostly-adequate/compose';
 
 // Manning Func Js
 // 4.3 Curried function evaluation
@@ -11,3 +11,4 @@ import './mostly-adequate/curry';
 
 // Mostly
 // Chapter 05: Coding by Composing
+// Pointfree
