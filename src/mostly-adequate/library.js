@@ -32,3 +32,8 @@ export const intercalate = curry((str, xs) => xs.join(str));
 export const toUpperCase = (s) => s.toUpperCase();
 // match :: RegExp -> String -> Boolean
 export const match = curry((re, str) => re.test(str));
+// trace ::
+export const trace = curry((tag, x) => {
+  console.log(tag, x);
+  return x;
+});
