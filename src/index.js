@@ -2,7 +2,7 @@ import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
 } from './test-simple/simple-test';
-import './mostly-adequate/compose';
+import './func/tuple';
 
 // Manning Func Js
 // 4.3 Curried function evaluation
@@ -10,5 +10,5 @@ import './mostly-adequate/compose';
 // 4.4.2 Binding into delayed functions
 
 // Mostly
-// Chapter 05: Coding by Composing
-// Pointfree
+// Chapter 06: Example Application
+// compose
