@@ -4,7 +4,7 @@ import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
 } from '../test-simple/simple-test';
-import { Tuple } from './model/Tuple';
+import { Tuple, StringPair } from './model/Tuple';
 
 const Status = Tuple(Boolean, String);
 
@@ -26,7 +26,6 @@ const isValid = (str) => {
 reportObject(isValid(normalize(trim('444-44-4444')))); // -> (true, 'Success!')
 
 // Listing 4.4
-const StringPair = Tuple(String, String);
 const name = new StringPair('Barkley', 'Rosser');
 
 let first = '';

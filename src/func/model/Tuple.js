@@ -5,7 +5,7 @@
 const R = require('ramda');
 
 // checkType :: Type -> Type -> Type | TypeError
-const checkType = R.curry((typeDef, obj) => {
+export const checkType = R.curry((typeDef, obj) => {
   if (!R.is(typeDef, obj)) {
     const type = typeof obj;
     throw new TypeError(`Type mismatch. Expected [${typeDef}] but found [${type}]`);
@@ -13,7 +13,6 @@ const checkType = R.curry((typeDef, obj) => {
   return obj;
 });
 
-// eslint-disable-next-line import/prefer-default-export
 export const Tuple = function (/* types */) {
   const typeInfo = Array.prototype.slice.call(arguments, 0);
   const _T = function (/* values */) {
@@ -34,3 +33,5 @@ export const Tuple = function (/* types */) {
   };
   return _T;
 };
+
+export const StringPair = Tuple(String, String);
