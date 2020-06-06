@@ -11,3 +11,6 @@ import {
 import './mostly-adequate/identity-functor';
 // Chapter 06: Example Application
 // compose
+
+// Egghead https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript
+// Enforce a null check with composable code branching using Either
