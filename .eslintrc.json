@@ -27,6 +27,7 @@
             "error",
             "windows"
         ],
+        "arrow-parens": 0,
         "no-console": "off",
         "max-len": [
             "error",
@@ -34,6 +35,8 @@
                 "code": 120
             }
         ],
+        "semi": 0,
+        "comma-dangle": "off",
         "no-plusplus": [
             "error",
             {

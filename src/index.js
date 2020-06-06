@@ -4,10 +4,10 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-import './func/curry';
+// import './func/curry';
 // Listing 4.5 Manual currying with two arguments
 
 // Mostly
-// import './mostly-adequate/curry';
+import './mostly-adequate/identity-functor';
 // Chapter 06: Example Application
 // compose
