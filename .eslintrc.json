@@ -36,6 +36,7 @@
             }
         ],
         "semi": 0,
+        "no-unused-vars": "off",
         "implicit-arrow-linebreak": 0,
         "comma-dangle": "off",
         "no-plusplus": [
