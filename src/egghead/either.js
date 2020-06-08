@@ -1,6 +1,8 @@
+import { fs } from 'fs'
 import {
   assert, report, printMessage, reportObject,
 } from '../test-simple/simple-test'
+
 
 const Right = x => ({
   map: f => Right(f(x)),
@@ -47,3 +49,34 @@ report(findColor('yellow')
     e => 'no color',
     c => c.toUpperCase()
   ))
+
+//   1
+// const getPort = () => {
+//   try {
+//     const str = fs.readFileSync('config.json')
+//     const config = JSON.parse(str)
+//     return config.port
+//   } catch (e) {
+//     return 3000
+//   }
+// }
+// report(getPort())
+
+const tryCatch = f => {
+  try {
+    return Right(f())
+  } catch (e) {
+    return Left(e)
+  }
+}
+
+// 2
+const getPort = () => {
+  tryCatch(() => fs.readFileSync('config.json'))
+    .map(c => JSON.parse(c))
+    .fold(e => 3000,
+      c => c.port)
+}
+
+
+report(getPort())

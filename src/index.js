@@ -1,7 +1,7 @@
 import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
-} from './test-simple/simple-test';
+} from './test-simple/simple-test'
 
 // Manning Func Js
 // import './func/curry';
@@ -13,5 +13,5 @@ import {
 // compose
 
 // Egghead https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript
-// javascript-composable-error-handling-with-either
-import './egghead/either';
+// A collection of Either examples compared to imperative code
+import './egghead/either'
