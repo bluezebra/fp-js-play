@@ -70,6 +70,9 @@ const tryCatch = f => {
   }
 }
 
+// NodeJs call not working in front end
+const x = fs.readFileSync('config.json')
+
 // 2
 const getPort = () => {
   tryCatch(() => fs.readFileSync('config.json'))
