@@ -4,7 +4,7 @@ import {
   report,
   printMessage,
   reportObject,
-} from "./test-simple/simple-test";
+} from './test-simple/simple-test';
 
 // Manning Func Js
 // import './func/curry';
@@ -17,5 +17,4 @@ import {
 
 // Egghead https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript
 // A collection of Either examples compared to imperative code
-import "./egghead/either";
-
+import './egghead/either';
