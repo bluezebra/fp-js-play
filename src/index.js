@@ -19,4 +19,3 @@ import {
 // A collection of Either examples compared to imperative code
 import "./egghead/either";
 
-// TODO add workspace to git
