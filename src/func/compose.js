@@ -15,8 +15,13 @@ const trim = s => s.replace(/^\s*|\s*$/g, '')
 const normalize = s => s.replace(/\-/g, '')
 const validLength = (param, str) => str.length === param
 const checkLengthSsn = _.partial(validLength, 9)
+report(checkLengthSsn)
+const checkLengthSsnCurry = _.curry(validLength)(9)
+report(checkLengthSsnCurry)
 const ssn = ' 444-44-4444 '
 const cleanInput = R.compose(normalize, trim)
 const isValidSsn = R.compose(checkLengthSsn, cleanInput)
+const isValidSsn2 = R.compose(checkLengthSsnCurry, cleanInput)
 report(cleanInput(ssn))
 report(isValidSsn(ssn))
+report(isValidSsn2(ssn))
