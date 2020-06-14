@@ -7,8 +7,8 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-// import './func/curry';
-// Listing 4.5 Manual currying with two arguments
+import './func/compose';
+// Listing 4.5.2 Functional composition
 
 // Mostly
 // import './mostly-adequate/identity-functor';
@@ -17,4 +17,4 @@ import {
 
 // Egghead https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript
 // A collection of Either examples compared to imperative code
-import './egghead/either';
+// import './egghead/either';
