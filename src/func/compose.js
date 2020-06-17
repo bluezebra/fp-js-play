@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _, { noop } from 'lodash';
 import * as R from 'ramda';
 import {
   // eslint-disable-next-line no-unused-vars

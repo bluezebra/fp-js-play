@@ -7,8 +7,8 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-import './func/compose';
-// Listing 4.6 Functional combinators
+import './func/combinators';
+// 5 Design patterns
 
 // Mostly
 // import './mostly-adequate/identity-functor';
