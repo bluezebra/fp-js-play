@@ -8,7 +8,7 @@ import {
 
 // Manning Func Js
 import './func/compose';
-// Listing 4.5.2 Functional composition
+// Listing 4.6 Functional combinators
 
 // Mostly
 // import './mostly-adequate/identity-functor';

@@ -25,3 +25,36 @@ const isValidSsn2 = R.compose(checkLengthSsnCurry, cleanInput)
 report(cleanInput(ssn))
 report(isValidSsn(ssn))
 report(isValidSsn2(ssn))
+
+
+if (!Function.prototype.compose) {
+  // eslint-disable-next-line no-extend-native
+  Function.prototype.compose = R.compose;
+}
+
+const students = ['Rosser', 'Turing', 'Kleene', 'Church']
+const grades = [80, 100, 90, 99]
+
+const smartestStudent = R.compose(
+  R.head,
+  R.pluck(0),
+  R.reverse,
+  R.sortBy(R.prop(1)),
+  R.zip
+)
+
+report(smartestStudent(students, grades))
+
+// using descriptive aliases
+const first = R.head
+const getName = R.pluck(0)
+const { reverse } = R
+const sortByGrade = R.sortBy(R.prop(1))
+const combine = R.zip
+
+const smartestStudentAliased = R.compose(first, getName, reverse, sortByGrade, combine)
+report(smartestStudentAliased(students, grades))
+
+// pipe is combose L to R
+const smartestStudentAliasedPiped = R.pipe(combine, sortByGrade, reverse, getName, first)
+report(smartestStudentAliasedPiped(students, grades))
