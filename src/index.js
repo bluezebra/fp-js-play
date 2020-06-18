@@ -7,8 +7,8 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-import './func/combinators';
-// 5 Design patterns
+import './func/error-handling';
+// 5 Design patterns > Either
 
 // Mostly
 // import './mostly-adequate/identity-functor';
