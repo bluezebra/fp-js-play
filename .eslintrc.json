@@ -27,6 +27,7 @@
             "error",
             "windows"
         ],
+        "operator-linebreak": "off",
         "arrow-parens": 0,
         "no-console": "off",
         "max-len": [
