@@ -8,7 +8,7 @@ import {
 
 // Manning Func Js
 import './func/error-handling';
-// 5 Design patterns > Either
+// 5.4 Monadic chains and compositions
 
 // Mostly
 // import './mostly-adequate/identity-functor';
