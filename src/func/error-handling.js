@@ -84,6 +84,8 @@ class IO {
 
 document.querySelector('#playground').innerHTML += '<div id="student-name"></div>';
 writeDom('#student-name')('alonzo church')
+// const content = document.createTextNode('<YOUR_CONTENT>');
+// document.querySelector('#playground').appendChild(content);
 
 const changeToStartCase =
   IO.from(readDom('#student-name'))

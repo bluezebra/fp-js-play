@@ -7,11 +7,12 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-import './func/error-handling';
+// import './func/error-handling';
 // 5.4 Monadic chains and compositions
+// Listing 5.8 Refactoring functions to use Either
 
 // Mostly
-// import './mostly-adequate/identity-functor';
+import './mostly-adequate/flickr';
 // Chapter 06: Example Application
 // compose
 
