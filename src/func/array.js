@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { assert, report, printMessage } from '../ninja/simple-test';
+import { assert, report, printMessage } from '../test-simple/simple-test';
 
 const arrayToMutate = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const sortDescMutable = (ar) => ar.sort((a, b) => b - a);
