@@ -7,17 +7,29 @@ const g = n => n + 1
 const f = n => n * 2
 // const doStuffBetter = x => f(g(x));
 
+if (!Function.prototype.compose) {
+  // eslint-disable-next-line no-extend-native
+  Function.prototype.compose = R.compose;
+}
 
 const trace = label => value => {
   console.log(`${label}: ${value}`)
   return value
 }
 
+// const doStuffBetter = x => trace('f ')(f(trace('g ')(g(x))));
 
 // const traceG = trace('after g')
 // const traceF = trace('after f')
 // const doStuffBetter = x => traceF(f(traceG(g(x))))
 
+// const fn = () => {};
+// const doStuffBetter = fn.compose(
+//   trace('after f'),
+//   f,
+//   trace('after g'),
+//   g
+// );
 
 const doStuffBetter = R.pipe(
   g,
@@ -26,5 +38,14 @@ const doStuffBetter = R.pipe(
   trace('after f')
 );
 
-
 report(doStuffBetter(20)) // 42
+
+
+const sum = (x, y, z) => x + y + z
+report(sum(20, 21, 1))
+
+const sumCurry = x => y => z => x + y + z
+report(sumCurry(20)(22)(1))
+
+const sum3 = sumCurry(3)
+report(sum3(20)(1))
