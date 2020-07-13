@@ -7,7 +7,7 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-// import './func/error-handling';
+import './func/error-handling';
 // 5.4 Monadic chains and compositions
 // Listing 5.8 Refactoring functions to use Either
 
@@ -22,4 +22,4 @@ import {
 
 // Composing software
 // https://medium.com/javascript-scene/composing-software-the-book-f31c77fc3ddc
-import './composing-software/compose';
+// import './composing-software/compose';
