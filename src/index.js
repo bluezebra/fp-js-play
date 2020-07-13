@@ -1,15 +1,6 @@
-import {
-  // eslint-disable-next-line no-unused-vars
-  assert,
-  report,
-  printMessage,
-  reportObject,
-} from './test-simple/simple-test';
-
 // Manning Func Js
-import './func/monad';
-// 5.4 Monadic chains and compositions
-// Listing 5.8 Refactoring functions to use Either
+import './func/error-handling';
+// 5.3.2
 
 // Mostly
 // import './mostly-adequate/flickr';

@@ -2,10 +2,9 @@ import _ from 'lodash';
 import * as R from 'ramda';
 import * as sfn from '../test-simple/simple-test';
 import wrapSimple from './WrapperSimple'
-import Wrapper from './Wrapper'
+import Wrapper from './library/Wrapper'
 import empty from './Empty'
 import Student from './model/Student';
-import Person from './model/Person';
 import Address from './model/Address';
 
 const plus = R.curry((a, b) => a + b)
@@ -41,7 +40,7 @@ const findObject = R.curry((db, id) => Wrapper.of(find(db, id)))
 // getAddress :: Student -> Wrapper
 const getAddress = student => Wrapper.of(student.map(R.prop('address')))
 
-const getStudent = R.compose(getAddress, R.tap(sfn.infoLogger), findObject(DB('student')))
+const getStudent = R.compose(getAddress, findObject(DB('student')))
 
-sfn.report(getStudent('444-44-444').join().get())
+sfn.reportObject(getStudent('444-44-444').join().get())
 // map(R.tap(sfn.report))

@@ -1,10 +1,7 @@
 import _ from 'lodash';
 import * as R from 'ramda';
-import {
-  // eslint-disable-next-line no-unused-vars
-  assert, report, printMessage, reportObject,
-} from '../test-simple/simple-test';
-
+import * as sfn from '../test-simple/simple-test'
+import IO from './IO'
 
 // Maybe can be applied to any function
 // without modification through 'lift' page 136
@@ -52,35 +49,6 @@ const write = (document, selector) => (val) => {
 const readDom = _.partial(read, document);
 const writeDom = _.partial(write, document);
 
-class IO {
-  constructor(effect) {
-    if (!_.isFunction(effect)) {
-      throw 'IO Usage: function required';
-    }
-    this.effect = effect;
-  }
-
-  static of(a) {
-    return new IO(() => a);
-  }
-
-  static from(fn) {
-    return new IO(fn);
-  }
-
-  map(fn) {
-    const self = this;
-    return new IO(() => fn(self.effect()));
-  }
-
-  chain(fn) {
-    return fn(this.effect());
-  }
-
-  run() {
-    return this.effect();
-  }
-}
 
 document.querySelector('#playground').innerHTML += '<div id="student-name"></div>';
 writeDom('#student-name')('alonzo church')
