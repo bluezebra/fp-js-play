@@ -1,4 +1,4 @@
-class Wrapper {
+export default class Wrapper {
   constructor(value) {
     this._value = value
   }

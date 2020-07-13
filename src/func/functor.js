@@ -3,7 +3,7 @@ import * as R from 'ramda';
 import wrap from './WrapperSimple'
 import {
   // eslint-disable-next-line no-unused-vars
-  assert, report, printMessage, reportObject,
+  assert, report, printMessage, reportObject, infoLogger
 } from '../test-simple/simple-test';
 
 const wrappedValue = wrap('Get Functional')
@@ -25,5 +25,4 @@ const five = two.fmap(plus3)
 report(five.map(R.identity))
 report(two.fmap(plus3).fmap(plus10).map(R.identity))
 
-const infoLogger = (v) => console.log(`InfoLogger [INFO] ${v}`)
 two.fmap(plus10).fmap(R.tap(infoLogger))
