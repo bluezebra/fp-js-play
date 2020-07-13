@@ -7,7 +7,7 @@ import {
 } from './test-simple/simple-test';
 
 // Manning Func Js
-import './func/error-handling';
+import './func/functor';
 // 5.4 Monadic chains and compositions
 // Listing 5.8 Refactoring functions to use Either
 
