@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import * as R from 'ramda';
-import wrap from './Wrapper'
+import wrap from './WrapperSimple'
 import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,

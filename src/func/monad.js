@@ -4,11 +4,11 @@ import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
 } from '../test-simple/simple-test';
-import wrap from './Wrapper'
+import wrapSimple from './WrapperSimple'
 import empty from './Empty'
 
 const isEven = n => Number.isFinite(n) && (n % 2 === 0)
-const half = val => (isEven(val) ? wrap(val / 2) : empty())
+const half = val => (isEven(val) ? wrapSimple(val / 2) : empty())
 
 report(half(4))
 report(half(3))
