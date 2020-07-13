@@ -1,34 +1,10 @@
 import _ from 'lodash';
 import * as R from 'ramda';
+import wrap from './Wrapper'
 import {
   // eslint-disable-next-line no-unused-vars
   assert, report, printMessage, reportObject,
 } from '../test-simple/simple-test';
-
-class Wrapper {
-  constructor(value) {
-    this._value = value
-  }
-
-  // crude simple implementation, not self preserving
-  // map :: (A -> B) -> A -> B
-  map(f) {
-    return f(this._value)
-  }
-
-  // Functor
-  // fmap :: (A -> B) -> Wrapper[A] -> Wrapper[B]
-  fmap(f) {
-    return new Wrapper(f(this._value))
-  }
-
-  toString() {
-    return `Wrapper (${this._value})`
-  }
-}
-
-// wrap :: A -> Wrapper(A)
-const wrap = (val) => new Wrapper(val)
 
 const wrappedValue = wrap('Get Functional')
 report(wrappedValue.map(x => x.toLowerCase()))
