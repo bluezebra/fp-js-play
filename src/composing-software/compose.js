@@ -49,3 +49,13 @@ report(sumCurry(20)(22)(1))
 
 const sum3 = sumCurry(3)
 report(sum3(20)(1))
+
+
+// auto curry
+// https://medium.com/javascript-scene/a-functional-programmers-introduction-to-javascript-composing-software
+
+const add3 = R.curry((a, b, c) => a + b + c);
+report(add3(1, 2, 3)) // 6
+report(add3(1, 2)(3)) // 6
+report(add3(1)(2, 3)) // 6
+report(add3(1)(2)(3)) // 6
