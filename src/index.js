@@ -1,5 +1,5 @@
 // Manning Func Js
-import './func/error-handling';
+import './play/fetch'
 // 5.3.2
 
 // Mostly
