@@ -9,19 +9,39 @@ const fetchConfigs = async () => {
       'Content-Type': 'application/json',
       method: 'GET',
       mode: 'cors',
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
+      'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Allow-Methods': 'GET',
+      'Access-Control-Request-Headers': 'X-Custom-Header'
     },
   }
 
-  const url = 'https://azfun-spm-qs-projectlists-dev-sievo.azurewebsites.net/api/ConfigColumns'
-  // const tenantId = 'af89019c-3178-4ec2-913a-5217a12312e9';
+  const url = 'http://localhost:7071/api/ConfigColumns'
 
-  const configsResponse = await fetch(url, config)
-    .then(d => reportObject(d))
-    .catch((error) => {
-      report('Error:', error)
-    })
+  const configsResponse = await fetch(url, config);
+  const responseData = await configsResponse.json();
+  const { basicColumns } = responseData;
+  const { customColumns } = responseData;
+  const { columnConfig } = responseData;
 
-  return configsResponse;
+  console.log(`responseData:${responseData}`);
+  console.log(`basicColumns:${basicColumns}`);
+
+
+  // const handleResponse = data => {
+  //   const { basicColumns, columnConfig, customColumns } = data;
+
+  //   reportObject(basicColumns)
+  //   reportObject(columnConfig)
+  //   reportObject(customColumns)
+  // }
+
+  // await fetch(url, config)
+  //   .then(response => response.json())
+  //   .then(handleResponse)
+  //   .catch(error => {
+  //     report('Error:', error)
+  //   })
 }
 
 fetchConfigs()
