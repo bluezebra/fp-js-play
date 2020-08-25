@@ -1,9 +1,9 @@
 // Manning Func Js
-import './play/fetch'
+// import './play/fetch'
 // 5.3.2
 
 // Mostly
-// import './mostly-adequate/flickr';
+import './mostly-adequate/maybe';
 // Chapter 06: Example Application
 // compose
 
