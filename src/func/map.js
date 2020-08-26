@@ -1,13 +1,13 @@
-import _ from 'lodash';
-// import * as R from 'ramda';
+import _ from 'lodash'
+// import * as R from 'ramda'
 // eslint-disable-next-line no-unused-vars
-import { assert, report, printMessage } from '../test-simple/simple-test';
-import Person from './model/Person';
-import Address from './model/Address';
+import { assert, report, printMessage } from '../test-simple/simple-test'
+import Person from './model/Person'
+import Address from './model/Address'
 
 // Function chaining 61
 
-const array = [3, 2, 5, 1, 7];
+const array = [3, 2, 5, 1, 7]
 report(array.map((x) => x));
 report(`reverse mutates${array.reverse()}`);
 report(array.map((x) => x));
