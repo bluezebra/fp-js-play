@@ -2,8 +2,11 @@
 // import './play/fetch'
 // 5.3.2
 
+// Learning React
+import './learning-react/clock';
+
 // Mostly
-import './mostly-adequate/maybe';
+// import './mostly-adequate/maybe';
 // Chapter 06: Example Application
 // compose
 
