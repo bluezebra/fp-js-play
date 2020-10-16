@@ -5,12 +5,12 @@ import {
   assert, report, printMessage, reportObject,
 } from '../test-simple/simple-test';
 
-const add = (x) => (y) => x + y;
-const increment = add(1);
-const addTen = add(10);
+const add = x => y => x + y
+const increment = add(1)
+const addTen = add(10)
 
-report(increment(2));
-report(addTen(2));
+report(increment(2))
+report(addTen(2))
 
 report(_.match(/r/g, 'hello world')); // [ 'r' ]
 const hasLetterR = _.match(/r/g); // x => x.match(/r/g)
